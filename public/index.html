@@ -253,24 +253,57 @@
       <!-- XL Nav Bar End -->
 
       <!-- Hero Section Begin -->
-      <div class="site-hero">
-        <div class="site-hero__img">
-          <picture>
-            <source
-              media="(orientation: portrait)"
-              srcset="./img/shoe_shop_portrait (2).jpg"
-            />
-            <img src="./img/shoe_shop_landscape (2).jpg" alt="Shoe Hero" />
-          </picture>
+      <div class="site-hero relative flex justify-center">
+        <div class="site-hero__video">
+          <!-- !!!Source Not Functioning!!! -->
+          <video
+            src="./img/videos/videoplayback.webm"
+            class=""
+            autoplay
+            muted
+            loop
+          ></video>
         </div>
-        <div class="site-hero__text-container">
-          <h1 class="site-hero__title"></h1>
-          <div class="site-hero__button">
-            <a href=""></a>
+        <div class="site-hero__text-container absolute xl:top-2/3 top-3/4">
+          <div class="site-hero__button items-center space-x-6">
+            <a
+              href=""
+              class="transition bg-sky-400 font-semibold rounded-full py-2 px-4 sm:px-10 am:py-3 text-gray-100 border-2 border-sky-400 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+              >Watch the Video</a
+            >
+            <a
+              href=""
+              class="transition bg-sky-400 font-semibold rounded-full py-2 px-4 sm:px-10 am:py-3 text-gray-100 border-2 border-sky-400 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+              >See the Shoes</a
+            >
           </div>
         </div>
       </div>
       <!-- Hero Section End -->
+      <!-- Some Image Begin -->
+      <img class="hidden lg:flex" src="./img/new_arrival_desktop.png" alt="" />
+      <img class="lg:hidden" src="./img/new_arrival.jpg" alt="" />
+      <!-- Some Image End -->
+      <!-- Some Text Begin -->
+      <div
+        class="flex flex-col items-center justify-center py-24 px-16 bg-sky-300 text-gray-800"
+      >
+        <h1 class="text-5xl font-bold font-mono text-center">
+          Steps In Motion | Size 6.5 Sneakers | City Gear
+        </h1>
+        <p class="py-4 px-32 text-center">
+          We have the perfect look for you! Our products include bags (like our
+          best cross body bag), footwear, hats and other apparel. We also have a
+          few must-see collections that will make anyone feel comfortable in
+          their own skin
+        </p>
+        <a
+          href=""
+          class="transition bg-gray-500 font-semibold rounded-full py-2 px-4 sm:px-10 am:py-3 text-gray-100 border-2 border-gray-500 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+          >See More</a
+        >
+      </div>
+      <!-- Some Text End -->
     </header>
     <!-- Header End -->
   </body>
