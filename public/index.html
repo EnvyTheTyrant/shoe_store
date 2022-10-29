@@ -6,16 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <script
       src="https://kit.fontawesome.com/e9d3c93633.js"
       crossorigin="anonymous"
     ></script>
     <title>Recreated Juliana Bicycles</title>
   </head>
+  <style>
+    .slick-slide,
+    .slick-slide[aria-hidden="true"]:not(.slick-cloned)
+      ~ .slick-cloned[aria-hidden="true"] {
+      transform: scale(1, 1);
+      transition: transform 0.3s;
+    }
+    .slick-center,
+    .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+      + .slick-cloned[aria-hidden="true"] {
+      -webkit-transform: scale(1.4);
+      -moz-transform: scale(1.4);
+      transform: scale(1.4, 1.4);
+    }
+  </style>
   <body class="bg-gray-400">
     <!-- Top Bar Begin -->
     <div
-      class="hidden xl:flex items-center justify-between h-10 w-full xl:px-24 bg-dark text-white"
+      class="hidden lg:flex items-center justify-between h-10 w-full px-24 bg-dark text-white"
     >
       <!-- Logos Begin -->
       <div class="flex">
@@ -102,7 +119,7 @@
     <header>
       <!-- Mobile Nav Bar Begin -->
       <nav
-        class="flex items-center justify-between bg-white w-full h-16 xl:hidden"
+        class="flex items-center justify-between bg-white w-full h-16 lg:hidden"
       >
         <!-- Main Person Logo Begin -->
         <div class="w-1/3 pl-4">
@@ -125,17 +142,19 @@
         </div>
         <!-- Main Person Logo End -->
         <!-- Main Logo Begin -->
-        <div class="text-dark w-1/3">
+        <div
+          class="text-dark w-1/3 hover:text-secondary duration-300 ease-in-out"
+        >
           <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 32"
               fill-rule="evenodd"
-              class="fill-current mx-auto h-32 w-32 md:h-40 md:w-40"
+              viewBox="0 0 32 4"
+              class="fill-current mx-auto w-32 md:w-40"
             >
               <path
-                d="M14.207 13.992c-.2 0-.531.067-.684.332l-2.117 3.668L12.56 18l1.644-2.848.781 1.344-1.5-.004.586.996 1.492.008.282.496H17l-2.125-3.68c-.215-.335-.496-.32-.668-.32Zm4.715 0c-1.063 0-1.922.895-1.922 2 0 1.106.86 2 1.922 2l2.078.016 1-1.016-3.09.008c-.562-.008-.898-.543-.91-1.004-.016-.496.36-1.016.918-1.023L21 15l1-1.008ZM2 14c-1.059 0-2 .95-2 2.055C0 17.16.941 18 2 18h2c1.059 0 2-.895 2-2s-.941-2-2-2Zm5 0v4h1v-3h1.281c.38-.004.719.137.719.496 0 .356-.332.508-.672.508L8 16l1.695 2.008L11 18l-1.023-1.203S10.992 16.5 11 15.48c.004-.843-.508-1.472-1.367-1.48Zm17 0h-1v3.617a.378.378 0 0 0 .375.383l2.625.008L27 17h-3Zm4.8.008c-1.062 0-1.921.894-1.921 2 0 1.105.86 2 1.922 2H31l1-1h-3.215c-.242.027-.7-.176-.812-.606l3.027.035.988-.91s-2.976.016-4 .02c.094-.461.797-.54.797-.54H31l1-1ZM2 15h2c.2.004.91.305.906.996A.988.988 0 0 1 4 17H2c-.457-.004-.922-.531-.922-.984 0-.563.531-1.024.922-1.016Z"
-              />
+                d="M 14.207 0 C 14.007 0 13.676 0.067 13.523 0.331 L 11.406 3.984 L 12.561 3.992 L 14.204 1.155 L 14.985 2.493 L 13.485 2.489 L 14.071 3.481 L 15.563 3.489 L 15.845 3.984 L 17 3.984 L 14.875 0.319 C 14.66 -0.015 14.379 0 14.207 0 Z M 18.922 0 C 17.859 0 17 0.892 17 1.992 C 17 3.093 17.86 3.984 18.922 3.984 L 21 4 L 22.001 2.988 L 18.91 2.996 C 18.348 2.988 18.012 2.455 18.001 1.996 C 17.984 1.501 18.36 0.984 18.918 0.977 L 21 1.004 L 22.001 0 L 18.922 0 Z M 2.001 0.008 C 0.941 0.008 0 0.955 0 2.055 C 0 3.155 0.941 3.992 2.001 3.992 L 4 3.992 C 5.059 3.992 6.001 3.1 6.001 2 C 6.001 0.9 5.059 0.008 4 0.008 L 2.001 0.008 Z M 7 0.008 L 7 3.992 L 8 3.992 L 8 1.004 L 9.281 1.004 C 9.661 1 10.001 1.14 10.001 1.497 C 10.001 1.852 9.668 2.004 9.329 2.004 L 8 2 L 9.695 4 L 11 3.992 L 9.977 2.793 C 9.977 2.793 10.993 2.497 11 1.481 C 11.004 0.643 10.492 0.016 9.633 0.008 L 7 0.008 Z M 24 0.008 L 23 0.008 L 23 3.611 C 22.998 3.819 23.166 3.989 23.375 3.992 L 26.001 4 L 27 2.996 L 24 2.996 L 24 0.008 Z M 28.8 0.016 C 27.738 0.016 26.879 0.907 26.879 2.008 C 26.879 3.108 27.739 4 28.801 4 L 31 4 L 32 3.004 L 28.785 3.004 C 28.543 3.031 28.085 2.828 27.973 2.4 L 31 2.435 L 31.988 1.529 C 31.988 1.529 29.012 1.545 27.988 1.549 C 28.082 1.089 28.785 1.011 28.785 1.011 L 31 1.011 L 32 0.015 L 28.8 0.016 Z M 2.001 1.004 L 4 1.004 C 4.2 1.008 4.91 1.308 4.906 1.996 C 4.917 2.515 4.52 2.953 4 2.996 L 2.001 2.996 C 1.543 2.992 1.078 2.467 1.078 2.016 C 1.078 1.455 1.609 0.996 2.001 1.004 Z"
+              ></path>
             </svg>
           </a>
         </div>
@@ -193,9 +212,9 @@
       </nav>
       <!-- Mobile Nav Bar End -->
 
-      <!-- XL Nav Bar Begin -->
+      <!-- LG Nav Bar Begin -->
       <nav
-        class="hidden items-center justify-between bg-white w-full h-16 xl:flex"
+        class="hidden items-center justify-between bg-white w-full h-16 lg:flex"
       >
         <!-- Bikes, Community Begin -->
         <div
@@ -250,8 +269,12 @@
         </div>
         <!-- Blog, What We Do End -->
       </nav>
-      <!-- XL Nav Bar End -->
+      <!-- LG Nav Bar End -->
+    </header>
+    <!-- Header End -->
 
+    <!-- Main Begin -->
+    <main>
       <!-- Hero Section Begin -->
       <div class="site-hero relative flex justify-center">
         <div class="site-hero__video">
@@ -268,30 +291,42 @@
           <div class="site-hero__button items-center space-x-6">
             <a
               href=""
-              class="transition bg-sky-400 font-semibold rounded-full py-2 px-4 sm:px-10 am:py-3 text-gray-100 border-2 border-sky-400 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+              class="transition bg-sky-400 font-semibold rounded-full py-2 px-4 sm:px-10 sm:py-3 text-gray-100 border-2 border-sky-400 text-xs sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out lg:text-lg"
               >Watch the Video</a
             >
             <a
               href=""
-              class="transition bg-sky-400 font-semibold rounded-full py-2 px-4 sm:px-10 am:py-3 text-gray-100 border-2 border-sky-400 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+              class="transition bg-sky-400 font-semibold rounded-full py-2 px-4 sm:px-10 sm:py-3 text-gray-100 border-2 border-sky-400 text-xs sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out lg:text-lg"
               >See the Shoes</a
             >
           </div>
         </div>
       </div>
       <!-- Hero Section End -->
+
       <!-- Some Image Begin -->
-      <img class="hidden lg:flex" src="./img/new_arrival_desktop.png" alt="" />
-      <img class="lg:hidden" src="./img/new_arrival.jpg" alt="" />
+      <div>
+        <img
+          class="hidden lg:flex"
+          src="./img/new_arrival_desktop.png"
+          alt=""
+        />
+        <img class="lg:hidden" src="./img/new_arrival.jpg" alt="" />
+      </div>
       <!-- Some Image End -->
-      <!-- Some Text Begin -->
+
+      <!-- Some Text 1 Begin -->
       <div
-        class="flex flex-col items-center justify-center py-24 px-16 bg-sky-300 text-gray-800"
+        class="flex flex-col items-center justify-center py-12 px-10 bg-sky-300 text-gray-800 sm:py-16 sm:px-24 lg:px-36 xl:px-40"
       >
-        <h1 class="text-5xl font-bold font-mono text-center">
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono text-center"
+        >
           Steps In Motion | Size 6.5 Sneakers | City Gear
         </h1>
-        <p class="py-4 px-32 text-center">
+        <p
+          class="py-4 px-6 md:text-lg lg:text-xl lg:py-8 xl:text-2xl text-center xl:px-12"
+        >
           We have the perfect look for you! Our products include bags (like our
           best cross body bag), footwear, hats and other apparel. We also have a
           few must-see collections that will make anyone feel comfortable in
@@ -299,12 +334,532 @@
         </p>
         <a
           href=""
-          class="transition bg-gray-500 font-semibold rounded-full py-2 px-4 sm:px-10 am:py-3 text-gray-100 border-2 border-gray-500 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+          class="transition bg-gray-500 font-semibold rounded-full mt-2 sm:mt-4 py-2 px-4 lg:text-xl sm:px-10 sm:py-3 text-gray-100 border-2 border-gray-500 text-xs sm:text-base hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
           >See More</a
         >
       </div>
-      <!-- Some Text End -->
-    </header>
-    <!-- Header End -->
+      <!-- Some Text 1 End -->
+
+      <!-- Some Text 2 Begin -->
+      <div
+        class="w-full bg-cover bg-center"
+        style="background-image: url('./img/shoe_shop_landscape-2.jpg')"
+      >
+        <div
+          class="bg-gray-900 bg-opacity-30 h-full w-full flex items-center justify-center py-40 px-12 flex-col md:px-24 lg:px-32"
+        >
+          <h1
+            class="text-4xl sm:text-5xl text-center text-white text font-semibold font-mono"
+          >
+            Reach New Heights
+          </h1>
+          <p
+            class="text-lg text-center text-white mt-1 sm:mt-4 md:text-xl lg:text-2xl"
+          >
+            When Hailey Elise was dreaming of a California field trip, the
+            Joplin was the perfect travel companion to elevate her walking
+            experience.
+          </p>
+          <a
+            href=""
+            class="transition bg-gray-500 font-semibold rounded-full mt-6 py-2 px-4 lg:text-xl sm:px-10 sm:py-3 text-gray-100 border-2 border-gray-500 text-xs sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+            >Reach There...</a
+          >
+        </div>
+      </div>
+      <!-- Some Text 2 End -->
+
+      <!-- Carousel Begin -->
+      <div class="bg-white pt-12">
+        <!-- Carousel Header Begin -->
+        <h1 class="text-gray-700 text-center mb-12 text-3xl font-bold">
+          Explore Our Lineup
+        </h1>
+        <!-- Carousel Header End -->
+
+        <!-- Carousel Container Begin -->
+        <div class="slider-nav cursor-grab">
+          <!-- Carousel Items Begin -->
+          <div class="">
+            <img src="./img/Shoes/shoes (1).png" alt="" />
+          </div>
+          <div class="">
+            <img src="./img/Shoes/shoes (2).png" alt="" />
+          </div>
+          <div class="">
+            <img src="./img/Shoes/shoes (3).png" alt="" />
+          </div>
+          <div class="">
+            <img src="./img/Shoes/shoes (4).png" alt="" />
+          </div>
+          <div class="">
+            <img src="./img/Shoes/shoes (5).png" alt="" />
+          </div>
+
+          <!-- Carousel Items End -->
+        </div>
+        <!-- Carousel Item Titles Begin -->
+        <div
+          class="slider-for text-center flex flex-col items-center justify-center mt-12"
+        >
+          <div>
+            <h1
+              class="text-3xl font-semibold uppercase -tracking-wider lg:text-4xl"
+            >
+              Wilder
+            </h1>
+            <p class="mt-2 mb-8 lg:text-xl lg:mb-12">Go Wilder</p>
+            <div class="">
+              <a
+                href=""
+                class="transition bg-gray-800 font-semibold rounded-full py-3 px-6 text-gray-100 border-2 border-gray-800 text-sm lg:text-xl sm:px-10 sm:py-3 sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+                >Check Out</a
+              >
+            </div>
+            <p class="my-4">&nbsp;</p>
+          </div>
+          <div>
+            <h1
+              class="text-3xl font-semibold uppercase -tracking-wider lg:text-4xl"
+            >
+              Gravity Sneaker
+            </h1>
+            <p class="mt-2 mb-8 lg:text-xl lg:mb-12">
+              The sneakers to get lost - and found - with.
+            </p>
+            <div class="">
+              <a
+                href=""
+                class="transition bg-gray-800 font-semibold rounded-full py-3 px-6 text-gray-100 border-2 border-gray-800 text-sm lg:text-xl sm:px-10 sm:py-3 sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+                >Check Out</a
+              >
+            </div>
+            <p class="my-4">&nbsp;</p>
+          </div>
+          <div>
+            <h1
+              class="text-3xl font-semibold uppercase -tracking-wider lg:text-4xl"
+            >
+              Forza
+            </h1>
+            <p class="mt-2 mb-8 lg:text-xl lg:mb-12">Reach new speeds.</p>
+            <div class="">
+              <a
+                href=""
+                class="transition bg-gray-800 font-semibold rounded-full py-3 px-6 text-gray-100 border-2 border-gray-800 text-sm lg:text-xl sm:px-10 sm:py-3 sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+                >Check Out</a
+              >
+            </div>
+            <p class="my-4">&nbsp;</p>
+          </div>
+          <div>
+            <h1
+              class="text-3xl font-semibold uppercase -tracking-wider lg:text-4xl"
+            >
+              Shoesly
+            </h1>
+            <p class="mt-2 mb-8 lg:text-xl lg:mb-12">
+              Ready to rally the World.
+            </p>
+            <div class="">
+              <a
+                href=""
+                class="transition bg-gray-800 font-semibold rounded-full py-3 px-6 text-gray-100 border-2 border-gray-800 text-sm lg:text-xl sm:px-10 sm:py-3 sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+                >Check Out</a
+              >
+            </div>
+            <p class="my-4">&nbsp;</p>
+          </div>
+          <div>
+            <h1
+              class="text-3xl font-semibold uppercase -tracking-wider lg:text-4xl"
+            >
+              Alllacedup
+            </h1>
+            <p class="mt-2 mb-8 lg:text-xl lg:mb-12">
+              Level Up The Playing Field
+            </p>
+            <div class="">
+              <a
+                href=""
+                class="transition bg-gray-800 font-semibold rounded-full py-3 px-6 text-gray-100 border-2 border-gray-800 text-sm lg:text-xl sm:px-10 sm:py-3 sm:text-sm hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+                >Check Out</a
+              >
+            </div>
+            <p class="mt-4">&nbsp;</p>
+          </div>
+        </div>
+        <!-- Carousel Item Titles End -->
+
+        <!-- Carousel Container End -->
+      </div>
+      <!-- Carousel End -->
+
+      <!-- Join Us Section Begin -->
+      <div
+        class="bg-white px-8 pt-12 sm:px-12 md:px-24 text-gray-700 flex flex-col lg:flex-row lg:space-x-10 py-8"
+      >
+        <img
+          class="w-full h-full lg:w-2/5 px-2 mb-8 lg:mx-0"
+          src="./img/guys.jpg"
+          alt=""
+        />
+        <div class="w-full flex flex-col h-full">
+          <h3 class="text-xl sm:text-3xl font-semibold uppercase">Join us!</h3>
+
+          <p class="text-xl sm:2xl font-semibold text-justify">
+            Sign up for The Juliana Journal—our monthly newsletter here.
+          </p>
+          <div class="my-4 flex flex-col space-y-4">
+            <input
+              class="border border-gray-300 p-4 rounded-lg"
+              type="text"
+              placeholder="First name"
+            />
+            <input
+              class="border border-gray-300 p-4 rounded-lg"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+          <p class="text-gray-900 text-sm font-mono font-semibold">
+            Sign Me Up!
+          </p>
+          <p class="my-4 text-sm text-justify">
+            We won’t spam you, and we won’t sell your info.
+          </p>
+          <div class="">
+            <input type="checkbox" id="email-recieve" />
+            <label
+              class="text-gray-700 text-justify text-sm font-bold"
+              for="email-recieve"
+              >Yes, I want to receive emails from Juliana Bicycles.*</label
+            >
+          </div>
+          <p class="my-2 font-thin text-justify text-sm">
+            You may unsubscribe at any time. For more information, read our
+            privacy policy.
+          </p>
+          <p class="my-2 font-thin text-justify text-sm">
+            By clicking submit below, you consent to allow Juliana Bicycles to
+            store and process the personal information submitted above to
+            provide you the content requested.
+          </p>
+          <a
+            href=""
+            class="transition text-center bg-blue-900 rounded-lg my-4 py-3 px-4 lg:w-1/2 lg:text-xl text-gray-100 border-2 border-blue-900 text-md sm:text-lg hover:border-black hover:bg-gray-100 hover:text-black duration-300 ease-in-out"
+            >Subscribe</a
+          >
+        </div>
+      </div>
+      <!-- Join Us Section End -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Begin -->
+    <footer>
+      <!-- More Begin -->
+      <div
+        class="bg-kindabrown flex flex-row p-12 flex-wrap justify-center items-start"
+      >
+        <!-------------------------------------------------->
+        <div class="text-center w-1/2 sm:w-1/4 p-4">
+          <h1 class="font-bold text-lg text-gray-100">Company</h1>
+          <ul>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >What We Do</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Cookie Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-------------------------------------------------->
+        <div class="text-center w-1/2 sm:w-1/4 p-4">
+          <h1 class="font-bold text-lg text-gray-100">Technology</h1>
+          <ul>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Lifetime Guarantee</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Carbon Expertise</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >VPP Technology</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Our Components</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-------------------------------------------------->
+        <div class="text-center w-1/2 sm:w-1/4 p-4">
+          <h1 class="font-bold text-lg text-gray-100">Support</h1>
+          <ul>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Product Recall</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Shoe Registration</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Warranty & Replacements</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Shop Parts & Tools</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Tech Support</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Webstore Returns & FAQ</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Start a Webstore Return</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-------------------------------------------------->
+        <div class="text-center w-1/2 sm:w-1/4 p-4">
+          <h1 class="font-bold text-lg text-gray-100">Experience</h1>
+          <ul>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Find a Retailer</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Factory Demo</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Ride Outs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[#acacac] text-[14px] hover:text-gray-100"
+                >Shop Oracle</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-------------------------------------------------->
+      </div>
+      <!-- More End -->
+
+      <!-- Black Line Begin -->
+      <div class="bg-gray-900 flex flex-row justify-between items-center py-4">
+        <div
+          class="text-gray-100 w-1/4 hover:text-secondary duration-300 ease-in-out py-7 hidden lg:flex xl:pl-16"
+        >
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              class="fill-current ml-16 w-32 md:w-40"
+              viewBox="0 0 32 4"
+            >
+              <path
+                d="M 14.207 0 C 14.007 0 13.676 0.067 13.523 0.331 L 11.406 3.984 L 12.561 3.992 L 14.204 1.155 L 14.985 2.493 L 13.485 2.489 L 14.071 3.481 L 15.563 3.489 L 15.845 3.984 L 17 3.984 L 14.875 0.319 C 14.66 -0.015 14.379 0 14.207 0 Z M 18.922 0 C 17.859 0 17 0.892 17 1.992 C 17 3.093 17.86 3.984 18.922 3.984 L 21 4 L 22.001 2.988 L 18.91 2.996 C 18.348 2.988 18.012 2.455 18.001 1.996 C 17.984 1.501 18.36 0.984 18.918 0.977 L 21 1.004 L 22.001 0 L 18.922 0 Z M 2.001 0.008 C 0.941 0.008 0 0.955 0 2.055 C 0 3.155 0.941 3.992 2.001 3.992 L 4 3.992 C 5.059 3.992 6.001 3.1 6.001 2 C 6.001 0.9 5.059 0.008 4 0.008 L 2.001 0.008 Z M 7 0.008 L 7 3.992 L 8 3.992 L 8 1.004 L 9.281 1.004 C 9.661 1 10.001 1.14 10.001 1.497 C 10.001 1.852 9.668 2.004 9.329 2.004 L 8 2 L 9.695 4 L 11 3.992 L 9.977 2.793 C 9.977 2.793 10.993 2.497 11 1.481 C 11.004 0.643 10.492 0.016 9.633 0.008 L 7 0.008 Z M 24 0.008 L 23 0.008 L 23 3.611 C 22.998 3.819 23.166 3.989 23.375 3.992 L 26.001 4 L 27 2.996 L 24 2.996 L 24 0.008 Z M 28.8 0.016 C 27.738 0.016 26.879 0.907 26.879 2.008 C 26.879 3.108 27.739 4 28.801 4 L 31 4 L 32 3.004 L 28.785 3.004 C 28.543 3.031 28.085 2.828 27.973 2.4 L 31 2.435 L 31.988 1.529 C 31.988 1.529 29.012 1.545 27.988 1.549 C 28.082 1.089 28.785 1.011 28.785 1.011 L 31 1.011 L 32 0.015 L 28.8 0.016 Z M 2.001 1.004 L 4 1.004 C 4.2 1.008 4.91 1.308 4.906 1.996 C 4.917 2.515 4.52 2.953 4 2.996 L 2.001 2.996 C 1.543 2.992 1.078 2.467 1.078 2.016 C 1.078 1.455 1.609 0.996 2.001 1.004 Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="flex flex-row w-full flex-wrap justify-between my-4 md:ml-24 md:mr-12 lg:mr-0 lg:pr-12 items-center"
+        >
+          <p></p>
+          <svg
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 text-gray-100"
+          >
+            <path
+              d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            fill="currentColor"
+            class="h-6 w-6 text-gray-100"
+          >
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 576 512"
+            class="h-6 w-6 text-gray-100"
+          >
+            <path
+              d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 text-gray-100"
+          >
+            <path
+              d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+            />
+            <path
+              d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+            />
+          </svg>
+          <p></p>
+          <select
+            form="myGeeks"
+            id="myCourses"
+            class="bg-gray-100 h-10 md:w-52 px-4 w-11/12 mx-auto md:mx-0 my-4"
+          >
+            <option value="English">English</option>
+            <option value="Mongolian">Mongolian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+          </select>
+          <br />
+        </div>
+      </div>
+      <!-- Black Line End -->
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Scripts Begin -->
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Scripts End -->
+
+    <!-- Slick Settings Begin -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".slider-for").slick({
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: ".slider-nav",
+        });
+        $(".slider-nav").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          arrows: false,
+          asNavFor: ".slider-for",
+          centerMode: true,
+          focusOnSelect: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+        $(".center").slick({
+          Infinity: true,
+          centerMode: true,
+          adaptiveHeight: true,
+          arrows: false,
+          // centerPadding: "15%",
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                Infinity: true,
+                arrows: false,
+                centerMode: true,
+                // centerPadding: "15%",
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                Infinity: true,
+                centerMode: true,
+                // centerPadding: "15%",
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <!-- Slick Settings End -->
   </body>
 </html>
